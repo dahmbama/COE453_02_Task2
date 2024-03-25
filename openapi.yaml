@@ -4,54 +4,55 @@ info:
   description: API Walk through.
   version: 1.0.0
 
-host: myapi.apigateway.vm-01-415119.cloud.goog
+host: task2.apigateway.vm-01-415119.cloud.goog
 basePath: /
 schemes:
   - https
   - http
 
+
 paths:
   /add:
     get:
       operationId: getAdd
-      summary: Open an existing GET running Cloud Function.
+      summary: Open an existing running image in Cloud Run.
       produces:
         - application/json
       responses:
         200:
           description: OK
       x-google-backend:
-        address: https://us-central1-vm-01-415119.cloudfunctions.net/add
+        address: https://nodeapp-icc7zinvxa-uc.a.run.app/add
   /sub:
     get:
       operationId: getSub
-      summary: Open an existing GET running Cloud Function.
+      summary: Open an existing running image in Cloud Run.
       produces:
         - application/json
       responses:
         200:
           description: OK
       x-google-backend:
-        address: https://us-central1-vm-01-415119.cloudfunctions.net/sub
-  /div:
-    get:
-      operationId: getDiv
-      summary: Open an existing GET running Cloud Function.
-      produces:
-        - application/json
-      responses:
-        200:
-          description: OK
-      x-google-backend:
-        address: https://us-central1-vm-01-415119.cloudfunctions.net/div
+        address: https://nodeapp-icc7zinvxa-uc.a.run.app/sub
   /mul:
     get:
       operationId: getMul
-      summary: Open an existing GET running Cloud Function.
+      summary: Open an existing running image in Cloud Run.
       produces:
         - application/json
       responses:
         200:
           description: OK
       x-google-backend:
-        address: https://us-central1-vm-01-415119.cloudfunctions.net/mul
+        address: https://nodeapp-icc7zinvxa-uc.a.run.app/mul
+  /div:
+    get:
+      operationId: getDiv
+      summary: Open an existing running image in Cloud Run.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://nodeapp-icc7zinvxa-uc.a.run.app/div
